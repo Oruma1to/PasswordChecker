@@ -5,27 +5,26 @@ Also i changed the argument name from admin to user , in order to be more in lin
 */
 
 const iteration4 = (password, user = 'normal') => {
-  if (user === 'normal') {
-    if (!password.match(/[A-Z]{1}/i)) {
-      return 'Password must contain at least 1 Letter'
-    } else if (!password.match(/\d{1}/)) {
-      return 'Password must contain at least 1 Number'
-    } else if (password.length < 10) {
-      return 'Password must be at least 10 characters long'
-    }
-  } else if (user === 'admin') {
-    if (!password.match(/[A-Z]{1}/i)) {
-      return 'Password must contain at least 1 Letter'
-    } else if (!password.match(/\d{1}/)) {
-      return 'Password must contain at least 1 Number'
-    } else if (!password.match(/[!@#$%^&*]{3}/)) {
-      return 'Password must contain at least 3 of the following special characters ! @ # $ % ^ & *'
-    } else if (password.length < 13) {
-      return 'Password must be at least 13 characters long'
-    }
+  let pwError = 'Password must contain at least';
+
+  // universal regex check for both type of users having atleast 1 letter and 1 number in pw.
+  if (!password.match(/[A-Z]{1}/i)) {
+    return `${pwError} 1 letter`;
+  } else if (!password.match(/\d{1}/)) {
+    return `${pwError} 1 number`;
   }
-  return 'Password Accepted!'
-}
+
+  if (user === 'normal') {
+    if (password.length < 10) return 'Password must be at least 10 characters long';
+  } else if (user === 'admin') {
+    if (!password.match(/[!@#$%^&*]{3}/)) {
+      return `${pwError} 3 of the following special characters ! @ # $ % ^ & *`;
+    } else if (password.length < 13) {
+      return 'Password must be at least 13 characters long';
+    };
+  };
+  return 'Password Accepted!'; // pw is accepted if nothing else is return.
+};
 
 module.exports = {
   iteration4
