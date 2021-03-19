@@ -2,11 +2,11 @@
 
 ### Language Used: Javascript
 
-#### Test Frame Work used: JEST (https://jestjs.io/)
+### Test Frame Work used: JEST (https://jestjs.io/)
 What is jest?
 Jest is a JavaScript testing framework built by Facebook and primarily designed for React-based applications, but is also used with Babel, JavaScript, Node, Angular, and Vue.
 
-#### How to run
+### How to run
 Clone this repository and pull it to your local machine. Using node.js execute "npm install" in order to install the jest testing framework.
 
 #### The Tool: algorithm that takes in a string and determines whether or not it meats the minimum requirements.
