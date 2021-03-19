@@ -27,8 +27,6 @@ const iteration4 = (password, user = 'normal') => {
   return 'Password Accepted!'
 }
 
-console.log(iteration4('hello1!#$!@$@!', 'admin')) // Password Accepted!
-console.log(iteration4('a!@#12345!', 'admin')) //Password must be at least 13 characters long
-console.log(iteration4('141415!#@!#!@#132')) //Password must contain at least 1 Letter
-console.log(iteration4('hello!!3124', 'admin')) //Password must contain at least 3 of the following special characters ! @ # $ % ^ & *
-console.log(iteration4('goodbye123')) //Password Accepted!
+module.exports = {
+  iteration4
+}

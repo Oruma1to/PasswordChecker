@@ -1,0 +1,23 @@
+{
+  "name": "PasswordChecker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "passwordChecker.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oruma1to/PasswordChecker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oruma1to/PasswordChecker/issues"
+  },
+  "homepage": "https://github.com/Oruma1to/PasswordChecker#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
