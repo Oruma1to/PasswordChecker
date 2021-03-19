@@ -5,12 +5,19 @@ The BELOW returns whether or not a string meets the requirements using simple Re
   -/i ignores all casing for the letters.
 */
 
-const iteration1 = (password) => {
-  return (password.match(/[A-Z]{1}\d{1}/i) && password.length >= 8) ? 'Valid' : 'Invalid'
+const iteration2 = (password) => {
+  if (!password.match(/[A-Z]{1}/i)) {
+    return 'Password must contain at least 1 Letter'
+  } else if (!password.match(/\d{1}/)) {
+    return 'Password must contain at least 1 Number'
+  } else if (password.length < 8) {
+    return 'Password must be at least 8 characters long'
+  }
+  return 'Password Accepted!'
 }
 
-console.log(iteration1('hello123')) // Pass
-console.log(iteration1('12345')) //Fail
-console.log(iteration1('hello')) //Fail
-console.log(iteration1('hello13')) //Fail
-console.log(iteration1('goodbye123')) //Pass
+console.log(iteration2('hello123')) // Password Accepted!
+console.log(iteration2('12345')) //Password must contain at least 1 Letter
+console.log(iteration2('hello')) //Password must contain at least 1 Number
+console.log(iteration2('hello13')) //Password must be at least 8 characters long
+console.log(iteration2('goodbye123')) //Password Accepted!
