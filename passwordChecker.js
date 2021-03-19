@@ -1,8 +1,5 @@
 /*
-The BELOW returns whether or not a string meets the requirements using simple Regular expression. 
-  -[A-Z]{1} will require at least 1 character to be a letter 
-  -\d{1} will require at least 1 digit, 
-  -/i ignores all casing for the letters.
+Used branched conditionals. If the string can make it past all 3 if statements it will return true. Otherwise it will return a message at the level that it fails.
 */
 
 const iteration2 = (password) => {
