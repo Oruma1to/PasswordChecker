@@ -6,14 +6,12 @@ Also i changed the argument name from admin to user , in order to be more in lin
 
 const iteration4 = (password, user = 'normal') => {
   let pwError = 'Password must contain at least';
-
   // universal regex check for both type of users having atleast 1 letter and 1 number in pw.
   if (!password.match(/[A-Z]{1}/i)) {
     return `${pwError} 1 letter`;
   } else if (!password.match(/\d{1}/)) {
     return `${pwError} 1 number`;
   }
-
   if (user === 'normal') {
     if (password.length < 10) return 'Password must be at least 10 characters long';
   } else if (user === 'admin') {
