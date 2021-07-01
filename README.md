@@ -18,7 +18,7 @@ Currently there are some test cases i set up using the final iteration of the pa
 
 Simply put **expect** takes the function call with the argument passed in, and **toMatch** checks to make sure that the result deeply equals the expected result.
 
-#### The Tool: algorithm that takes in a string and determines whether or not it meats the minimum requirements.
+#### The Tool: algorithm that takes in a string and determines whether or not it meets the minimum requirements.
 
 ### Requirements
 The final source code checks for the following conditions to be met when a password is entered, if not then an error message will display what is missing until all conditions are met.
